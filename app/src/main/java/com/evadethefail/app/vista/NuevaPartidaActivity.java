@@ -51,6 +51,8 @@ public class NuevaPartidaActivity extends AppCompatActivity {
         selectButton.setOnClickListener(v -> {
             if (personajeSeleccionado != "") {
                 iniciarPartida();
+                MapaFragment.casilla = 1;
+                finish();
             }
         });
     }

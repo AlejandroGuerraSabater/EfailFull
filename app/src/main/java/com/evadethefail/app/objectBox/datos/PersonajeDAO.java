@@ -38,7 +38,7 @@ public class PersonajeDAO {
         // 📌 Crear personajes jugables con su clase asignada
         PersonajeBase caballero = new PersonajeBase(caballeroClase, 3, 320, 180, 180, 5, 50);
         PersonajeBase asesino = new PersonajeBase(asesinoClase, 3, 215, 170, 190, 40, 100);
-        PersonajeBase hechicera = new PersonajeBase(hechiceraClase, 4, 300, 140, 180, 20, 50);
+        PersonajeBase hechicera = new PersonajeBase(hechiceraClase, 4, 300, 200, 160, 20, 50);
 
         personajeBox.put(caballero, asesino, hechicera);
 
@@ -226,7 +226,7 @@ public class PersonajeDAO {
 
         asignarClase(cartasAsesino[13], asesinoClase); // ID 214
         asignarTipos(cartasAsesino[13], heroico, demerito);
-        asignarEfectos(cartasAsesino[13], 17);
+        asignarEfectos(cartasAsesino[13], 30);
 
         asignarClase(cartasAsesino[14], asesinoClase); // ID 215
         asignarTipos(cartasAsesino[14], cortante);

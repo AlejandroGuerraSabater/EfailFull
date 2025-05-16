@@ -259,7 +259,7 @@ public class MetodosMarcas {
 
         } else {
 
-            int potencia = ControladorCombate.siguienteAtaque.getPotencia() / 2;
+            int potencia = ControladorCombate.siguienteAtaque.getPotencia();
             int dano = ControladorCombate.instanciaControlador.calcularDano(
                     potencia,
                     PartidaActivity.enemigo.getNivel(),
@@ -272,7 +272,7 @@ public class MetodosMarcas {
             PartidaActivity.enemigo.curar(dano);
             ControladorCombate.instanciaControlador.danar(true, dano);
             if (dano != 0)
-                ControladorCombate.instanciaControlador.mostrarMensaje("¡Explosión de vida, te robaron " + dano + " puntos de vida!", false);
+                ControladorCombate.instanciaControlador.mostrarMensaje("¡Explosión de vida, te robaron " + (dano * 2) + " puntos de vida!", false);
         }
     }
 

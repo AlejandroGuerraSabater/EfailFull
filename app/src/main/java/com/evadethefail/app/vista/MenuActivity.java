@@ -50,6 +50,7 @@ public class MenuActivity extends AppCompatActivity {
             if (idPartidaGuardada != -1) {
                 ControladorPartida.nuevaPartida = true;
                 ControladorPartida.cargarPartida(getApplicationContext());
+                idPartidaGuardada = -1;
                 finish();
             }
         });
