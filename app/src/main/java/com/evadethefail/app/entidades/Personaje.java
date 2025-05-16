@@ -258,7 +258,7 @@ public class Personaje {
                     case "Vida Restante":
 
                         this.setVidaRestante((int) (this.getVidaRestante() + mod.getVariacionPlana()));
-                        this.setVidaRestante((int) (this.getVidaRestante() + this.getVidaRestante() * mod.getPorcentaje()/100));
+                        this.setVidaRestante((int) (this.getVidaRestante() + this.getVida() * mod.getPorcentaje()/100));
                         if (this.getVidaRestante() > this.getVida()){
                             this.setVidaRestante(this.getVida());
                         } else if (this.getVidaRestante() < 0) {
@@ -317,7 +317,7 @@ public class Personaje {
                     case "VidaRestante":
 
                         this.setVidaRestante((int) (this.getVidaRestante() - mod.getVariacionPlana()));
-                        this.setVidaRestante((int) (this.getVidaRestante() - this.getVidaRestante() * mod.getPorcentaje()/100));
+                        this.setVidaRestante((int) (this.getVidaRestante() - this.getVida() * mod.getPorcentaje()/100));
                         break;
 
                     case "Defensa":

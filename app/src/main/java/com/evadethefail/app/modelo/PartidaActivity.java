@@ -58,12 +58,6 @@ public class PartidaActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
 
-        PartidaActivity.mazo = new ArrayList<>();
-        PartidaActivity.mano = new ArrayList<>();
-        PartidaActivity.porRobar = new ArrayList<>();
-        PartidaActivity.descartadas = new ArrayList<>();
-        PartidaActivity.desterradas = new ArrayList<>();
-
         // Configurar el adaptador del ViewPager2
         pagerAdapter = new PartidaPagerAdapter(this);
         viewPager.setAdapter(pagerAdapter);

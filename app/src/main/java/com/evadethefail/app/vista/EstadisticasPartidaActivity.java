@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.evadethefail.app.controlador.ControladorPartida;
 import com.evadethefail.app.modelo.PartidaActivity;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import com.evadethefail.app.R;
@@ -88,6 +89,11 @@ public class EstadisticasPartidaActivity extends AppCompatActivity {
 
     private void volverAlMenu() {
         Intent intent = new Intent(this, MenuActivity.class);
+        PartidaActivity.mazo = new ArrayList<>();
+        PartidaActivity.mano = new ArrayList<>();
+        PartidaActivity.porRobar = new ArrayList<>();
+        PartidaActivity.descartadas = new ArrayList<>();
+        PartidaActivity.desterradas = new ArrayList<>();
         startActivity(intent);
         finish();
     }
