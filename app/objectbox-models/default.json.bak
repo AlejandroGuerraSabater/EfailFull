@@ -1,0 +1,1128 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:4967549173650059802",
+      "lastPropertyId": "6:6503444681763912898",
+      "name": "Ataque",
+      "properties": [
+        {
+          "id": "1:223197904061435487",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3540222027559613238",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:9203571733401496154",
+          "name": "objetivo",
+          "type": 5
+        },
+        {
+          "id": "4:7870180532870405476",
+          "name": "probabilidad",
+          "type": 5
+        },
+        {
+          "id": "5:3642528206589320949",
+          "name": "potencia",
+          "type": 5
+        },
+        {
+          "id": "6:6503444681763912898",
+          "name": "idAtaque",
+          "type": 6
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:8446752804042684796",
+          "name": "tipos",
+          "targetId": "15:6106395404429427352"
+        }
+      ]
+    },
+    {
+      "id": "2:3930448635828584691",
+      "lastPropertyId": "9:8642359055684187441",
+      "name": "Carta",
+      "properties": [
+        {
+          "id": "1:7975753847989681711",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:425421914317672142",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:4725256829509445166",
+          "name": "descripcion",
+          "type": 9
+        },
+        {
+          "id": "4:4925826288019606085",
+          "name": "costo",
+          "type": 5
+        },
+        {
+          "id": "5:6800048757119344169",
+          "name": "objetivo",
+          "type": 5
+        },
+        {
+          "id": "6:1697649243942191144",
+          "name": "potencia",
+          "type": 5
+        },
+        {
+          "id": "7:7201605341518194848",
+          "name": "elemento",
+          "type": 9
+        },
+        {
+          "id": "8:6466039406064377932",
+          "name": "claseId",
+          "indexId": "2:746522665927349891",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Clase"
+        },
+        {
+          "id": "9:8642359055684187441",
+          "name": "idCarta",
+          "type": 6
+        }
+      ],
+      "relations": [
+        {
+          "id": "3:7159857547524088758",
+          "name": "tipos",
+          "targetId": "15:6106395404429427352"
+        }
+      ]
+    },
+    {
+      "id": "3:6920410685731018789",
+      "lastPropertyId": "2:1454861607131063447",
+      "name": "Clase",
+      "properties": [
+        {
+          "id": "1:5565618193711072372",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1454861607131063447",
+          "name": "nombre",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:7579115246835215498",
+      "lastPropertyId": "6:6396612964108833344",
+      "name": "Efecto",
+      "properties": [
+        {
+          "id": "1:8238693198232719393",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4462935946072219796",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:1119650918548473764",
+          "name": "duracionTurnos",
+          "type": 5
+        },
+        {
+          "id": "4:3828864567162469547",
+          "name": "duracionAtaques",
+          "type": 5
+        },
+        {
+          "id": "5:7152500840320942268",
+          "name": "duracionAcciones",
+          "type": 5
+        },
+        {
+          "id": "6:6396612964108833344",
+          "name": "idEfecto",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:4289279333415351470",
+      "lastPropertyId": "18:5544942159037685101",
+      "name": "Enemigo",
+      "properties": [
+        {
+          "id": "1:9021685090960511036",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:391105238002746322",
+          "name": "idEnemigoBase",
+          "type": 6
+        },
+        {
+          "id": "3:2459377895355646739",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "4:9087266827245243700",
+          "name": "elemento",
+          "type": 9
+        },
+        {
+          "id": "5:2814503970945298187",
+          "name": "casilla",
+          "type": 5
+        },
+        {
+          "id": "6:7257548121096480072",
+          "name": "vida",
+          "type": 5
+        },
+        {
+          "id": "7:7999505977574773873",
+          "name": "vidaRestante",
+          "type": 5
+        },
+        {
+          "id": "8:685739471895379012",
+          "name": "ataque",
+          "type": 5
+        },
+        {
+          "id": "9:5962938387426537668",
+          "name": "defensa",
+          "type": 5
+        },
+        {
+          "id": "10:3585497951806981115",
+          "name": "bloqueo",
+          "type": 5
+        },
+        {
+          "id": "11:6141542273166510288",
+          "name": "probabilidadCritico",
+          "type": 8
+        },
+        {
+          "id": "12:2310514660834799630",
+          "name": "danioCritico",
+          "type": 8
+        },
+        {
+          "id": "13:7411536495581633288",
+          "name": "ataqueReal",
+          "type": 5
+        },
+        {
+          "id": "14:8914778301251979035",
+          "name": "defensaReal",
+          "type": 5
+        },
+        {
+          "id": "15:2738400676219299511",
+          "name": "probabilidadCriticoReal",
+          "type": 8
+        },
+        {
+          "id": "16:1504227891724664894",
+          "name": "danioCriticoReal",
+          "type": 8
+        },
+        {
+          "id": "17:7763740010419400820",
+          "name": "nivel",
+          "type": 5
+        },
+        {
+          "id": "18:5544942159037685101",
+          "name": "intencion",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "5:9022916859883386961",
+          "name": "efectos",
+          "targetId": "4:7579115246835215498"
+        },
+        {
+          "id": "6:2005036128182506357",
+          "name": "ataques",
+          "targetId": "1:4967549173650059802"
+        }
+      ]
+    },
+    {
+      "id": "6:6883467983108374547",
+      "lastPropertyId": "11:1567662400657959154",
+      "name": "EnemigoBase",
+      "properties": [
+        {
+          "id": "1:8306337053649188855",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7944141327942871839",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:5703628610235300811",
+          "name": "elemento",
+          "type": 9
+        },
+        {
+          "id": "4:2185229080476626348",
+          "name": "casilla",
+          "type": 5
+        },
+        {
+          "id": "5:5116319392150324276",
+          "name": "vida",
+          "type": 5
+        },
+        {
+          "id": "6:4698776766870750262",
+          "name": "vidaRestante",
+          "type": 5
+        },
+        {
+          "id": "7:1469266721388864949",
+          "name": "ataque",
+          "type": 5
+        },
+        {
+          "id": "8:7530359460830605761",
+          "name": "defensa",
+          "type": 5
+        },
+        {
+          "id": "9:8858486731836640517",
+          "name": "bloqueo",
+          "type": 5
+        },
+        {
+          "id": "10:1068320505129683060",
+          "name": "probabilidadCritico",
+          "type": 8
+        },
+        {
+          "id": "11:1567662400657959154",
+          "name": "danioCritico",
+          "type": 8
+        }
+      ],
+      "relations": [
+        {
+          "id": "7:8145983864799240373",
+          "name": "ataques",
+          "targetId": "1:4967549173650059802"
+        }
+      ]
+    },
+    {
+      "id": "8:5614515907995015623",
+      "lastPropertyId": "14:351609848467947414",
+      "name": "Jugador",
+      "properties": [
+        {
+          "id": "1:5495788977336162746",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6913603360834853686",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:6521060633925896751",
+          "name": "contrasena",
+          "type": 9
+        },
+        {
+          "id": "14:351609848467947414",
+          "name": "estadisticasId",
+          "indexId": "19:3452138388605137749",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "EstadisticasJugador"
+        }
+      ],
+      "relations": [
+        {
+          "id": "8:5886498096944553004",
+          "name": "logros",
+          "targetId": "9:1356008575860951613"
+        }
+      ]
+    },
+    {
+      "id": "9:1356008575860951613",
+      "lastPropertyId": "4:3012520379250010606",
+      "name": "Logro",
+      "properties": [
+        {
+          "id": "1:5021835851602981602",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1342383932981006228",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:4715586393750639459",
+          "name": "descripcion",
+          "type": 9
+        },
+        {
+          "id": "4:3012520379250010606",
+          "name": "rareza",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "10:5744356078520366981",
+      "lastPropertyId": "10:3993733892914853056",
+      "name": "Marca",
+      "properties": [
+        {
+          "id": "1:259837874120609991",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5684631286787789578",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:3851114580079742444",
+          "name": "duracionTurnos",
+          "type": 5
+        },
+        {
+          "id": "4:8729633477679637192",
+          "name": "duracionAtaques",
+          "type": 5
+        },
+        {
+          "id": "5:5730299842421549179",
+          "name": "duracionAcciones",
+          "type": 5
+        },
+        {
+          "id": "6:1004839675676930527",
+          "name": "marcaNombre",
+          "type": 9
+        },
+        {
+          "id": "7:8220738612581054630",
+          "name": "descripcion",
+          "type": 9
+        },
+        {
+          "id": "8:5166330817465969316",
+          "name": "momento",
+          "type": 9
+        },
+        {
+          "id": "9:5526179958789031903",
+          "name": "metodosAsociados",
+          "type": 9
+        },
+        {
+          "id": "10:3993733892914853056",
+          "name": "idEfecto",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "11:3381976801307784445",
+      "lastPropertyId": "10:8271929779474067550",
+      "name": "Modificador",
+      "properties": [
+        {
+          "id": "1:385075017036128504",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3023600218559557179",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:5652282665366987486",
+          "name": "duracionTurnos",
+          "type": 5
+        },
+        {
+          "id": "4:211718492453363100",
+          "name": "duracionAtaques",
+          "type": 5
+        },
+        {
+          "id": "5:3696365288793222170",
+          "name": "duracionAcciones",
+          "type": 5
+        },
+        {
+          "id": "6:6632192829312820678",
+          "name": "estadistica",
+          "type": 9
+        },
+        {
+          "id": "7:2208258745422831768",
+          "name": "porcentaje",
+          "type": 8
+        },
+        {
+          "id": "8:7177801289207925411",
+          "name": "variacionPlana",
+          "type": 5
+        },
+        {
+          "id": "9:1293534223855206153",
+          "name": "marcaId",
+          "indexId": "9:3585181666811803764",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Marca"
+        },
+        {
+          "id": "10:8271929779474067550",
+          "name": "idEfecto",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "12:4266542988171457437",
+      "lastPropertyId": "5:6252863395500202568",
+      "name": "Partida",
+      "properties": [
+        {
+          "id": "1:3729965461601256174",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:228893390388950282",
+          "name": "casilla",
+          "type": 5
+        },
+        {
+          "id": "3:6649711800153976567",
+          "name": "jugadorId",
+          "type": 5
+        },
+        {
+          "id": "4:6926835319812693035",
+          "name": "personajeId",
+          "indexId": "4:7554943363280733812",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Personaje"
+        },
+        {
+          "id": "5:6252863395500202568",
+          "name": "estadisticasId",
+          "indexId": "5:6366134798542338742",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "EstadisticasPartida"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "13:3323131184248320876",
+      "lastPropertyId": "21:3376723008712863831",
+      "name": "Personaje",
+      "properties": [
+        {
+          "id": "1:1448597937042475869",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:301351542050653435",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:5289175051375459830",
+          "name": "nivel",
+          "type": 5
+        },
+        {
+          "id": "4:1493472468837314949",
+          "name": "energia",
+          "type": 5
+        },
+        {
+          "id": "5:2997677612105080728",
+          "name": "energiaRestante",
+          "type": 5
+        },
+        {
+          "id": "6:2021191063118683965",
+          "name": "vida",
+          "type": 5
+        },
+        {
+          "id": "7:4053297926652838554",
+          "name": "vidaRestante",
+          "type": 5
+        },
+        {
+          "id": "8:6942117112609008331",
+          "name": "ataque",
+          "type": 5
+        },
+        {
+          "id": "9:3277263895508731928",
+          "name": "defensa",
+          "type": 5
+        },
+        {
+          "id": "10:4917695616184016131",
+          "name": "bloqueo",
+          "type": 5
+        },
+        {
+          "id": "11:4522851259905890625",
+          "name": "probabilidadCritico",
+          "type": 7
+        },
+        {
+          "id": "12:7134014135071949405",
+          "name": "danoCritico",
+          "type": 7
+        },
+        {
+          "id": "13:4583436443857720341",
+          "name": "ataqueReal",
+          "type": 5
+        },
+        {
+          "id": "14:2243774987757024497",
+          "name": "defensaReal",
+          "type": 5
+        },
+        {
+          "id": "15:8848656076726056665",
+          "name": "probabilidadCriticoReal",
+          "type": 8
+        },
+        {
+          "id": "16:817214428231727653",
+          "name": "danoCriticoReal",
+          "type": 8
+        },
+        {
+          "id": "18:2973077025846596575",
+          "name": "personajeBaseId",
+          "indexId": "6:8405349115527496371",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "PersonajeBase"
+        },
+        {
+          "id": "19:7251121279863401826",
+          "name": "claseId",
+          "indexId": "8:5790179863423789395",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Clase"
+        },
+        {
+          "id": "20:4711193318084787221",
+          "name": "partidaId",
+          "indexId": "10:1679528274631177697",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Partida"
+        },
+        {
+          "id": "21:3376723008712863831",
+          "name": "idPartida",
+          "type": 5
+        }
+      ],
+      "relations": [
+        {
+          "id": "10:1418817301544139958",
+          "name": "efectos",
+          "targetId": "4:7579115246835215498"
+        }
+      ]
+    },
+    {
+      "id": "14:8472736304585752846",
+      "lastPropertyId": "11:983574166013928796",
+      "name": "PersonajeBase",
+      "properties": [
+        {
+          "id": "1:4513924929226852187",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8781019850402271129",
+          "name": "energia",
+          "type": 5
+        },
+        {
+          "id": "3:8492596964485774537",
+          "name": "energiaRestante",
+          "type": 5
+        },
+        {
+          "id": "4:1150239776342766675",
+          "name": "vida",
+          "type": 5
+        },
+        {
+          "id": "5:3474131542573095859",
+          "name": "vidaRestante",
+          "type": 5
+        },
+        {
+          "id": "6:1231488544684519064",
+          "name": "ataque",
+          "type": 5
+        },
+        {
+          "id": "7:5771559271198818547",
+          "name": "defensa",
+          "type": 5
+        },
+        {
+          "id": "8:1464350830260001704",
+          "name": "bloqueo",
+          "type": 5
+        },
+        {
+          "id": "9:8188779401876255364",
+          "name": "probabilidadCritico",
+          "type": 7
+        },
+        {
+          "id": "10:4656685477948212616",
+          "name": "danoCritico",
+          "type": 7
+        },
+        {
+          "id": "11:983574166013928796",
+          "name": "claseId",
+          "indexId": "7:5205912600060328805",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Clase"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "15:6106395404429427352",
+      "lastPropertyId": "4:3364712328819412",
+      "name": "Tipo",
+      "properties": [
+        {
+          "id": "1:6568576597487321874",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2580552564436921368",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "4:3364712328819412",
+          "name": "categoria",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "16:8156225137287404419",
+      "lastPropertyId": "7:2910609825652213912",
+      "name": "AtaqueEfecto",
+      "properties": [
+        {
+          "id": "1:4892592613148471511",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2001143057079182153",
+          "name": "ataqueId",
+          "indexId": "11:791320756244496203",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Ataque"
+        },
+        {
+          "id": "3:318696304836647420",
+          "name": "efectoId",
+          "indexId": "12:5192677361218690582",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Efecto"
+        },
+        {
+          "id": "4:3177274907708912116",
+          "name": "idEfecto",
+          "type": 6
+        },
+        {
+          "id": "5:1207265681702129529",
+          "name": "nombreEfecto",
+          "type": 9
+        },
+        {
+          "id": "7:2910609825652213912",
+          "name": "nombreAtaque",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "17:7341722745635777296",
+      "lastPropertyId": "7:4471125057959458623",
+      "name": "CartaEfecto",
+      "properties": [
+        {
+          "id": "1:6796333978436179582",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3726818802117882053",
+          "name": "cartaId",
+          "indexId": "13:2847266730006346141",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Carta"
+        },
+        {
+          "id": "3:7034158740745694624",
+          "name": "efectoId",
+          "indexId": "14:3421747422786149536",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Efecto"
+        },
+        {
+          "id": "5:2689858234419535997",
+          "name": "idEfecto",
+          "type": 6
+        },
+        {
+          "id": "6:6379274271695124536",
+          "name": "nombreEfecto",
+          "type": 9
+        },
+        {
+          "id": "7:4471125057959458623",
+          "name": "nombreCarta",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "19:2547051851247401611",
+      "lastPropertyId": "16:1666159696221108620",
+      "name": "EstadisticasJugador",
+      "properties": [
+        {
+          "id": "1:8682233297551111965",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2102164681366973214",
+          "name": "vecesUsadoCaballero",
+          "type": 5
+        },
+        {
+          "id": "3:119069471923430136",
+          "name": "vecesUsadoAsesino",
+          "type": 5
+        },
+        {
+          "id": "4:1793572209384282990",
+          "name": "vecesUsadoHechicera",
+          "type": 5
+        },
+        {
+          "id": "5:8751998668304616098",
+          "name": "personajeFavorito",
+          "type": 9
+        },
+        {
+          "id": "6:5226623443673298824",
+          "name": "enemigosDerrotados",
+          "type": 5
+        },
+        {
+          "id": "7:8035565572995924659",
+          "name": "vidaPerdida",
+          "type": 5
+        },
+        {
+          "id": "8:6190120134039859008",
+          "name": "danoCausado",
+          "type": 5
+        },
+        {
+          "id": "9:2532349262250342633",
+          "name": "danoRecibido",
+          "type": 5
+        },
+        {
+          "id": "10:1482788695009718769",
+          "name": "cartasUsadas",
+          "type": 5
+        },
+        {
+          "id": "11:3286357459532184262",
+          "name": "criticosCausadosJugador",
+          "type": 5
+        },
+        {
+          "id": "12:8594882989722615586",
+          "name": "criticosCausadosContraJugador",
+          "type": 5
+        },
+        {
+          "id": "13:2392420507945431831",
+          "name": "partidasJugadas",
+          "type": 5
+        },
+        {
+          "id": "14:4020897161574553924",
+          "name": "jugadorId",
+          "indexId": "16:3609163362232911307",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Jugador"
+        },
+        {
+          "id": "16:1666159696221108620",
+          "name": "danoMaximo",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "20:7256946807242399654",
+      "lastPropertyId": "10:4657362528602239747",
+      "name": "EstadisticasPartida",
+      "properties": [
+        {
+          "id": "1:4241029507110225499",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8539991625873701840",
+          "name": "enemigosDerrotados",
+          "type": 5
+        },
+        {
+          "id": "3:832161967912664339",
+          "name": "vidaPerdida",
+          "type": 5
+        },
+        {
+          "id": "4:3804228786717785173",
+          "name": "danoCausado",
+          "type": 5
+        },
+        {
+          "id": "5:3443494766426651176",
+          "name": "danoRecibido",
+          "type": 5
+        },
+        {
+          "id": "6:4667211176009572390",
+          "name": "cartasUsadas",
+          "type": 5
+        },
+        {
+          "id": "7:4700455325083880005",
+          "name": "criticosCausadosJugador",
+          "type": 5
+        },
+        {
+          "id": "8:5550801115346643433",
+          "name": "criticosCausadosContraJugador",
+          "type": 5
+        },
+        {
+          "id": "9:8475674811708919185",
+          "name": "estadisticasJugadorId",
+          "indexId": "17:3980319518234531341",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "EstadisticasJugador"
+        },
+        {
+          "id": "10:4657362528602239747",
+          "name": "partidaId",
+          "indexId": "18:2930607789205987905",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Partida"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "21:6496139772563282082",
+      "lastPropertyId": "4:9100435467147197866",
+      "name": "CartasPersonaje",
+      "properties": [
+        {
+          "id": "1:4646517806223313119",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6936072029442199366",
+          "name": "cantidad",
+          "type": 5
+        },
+        {
+          "id": "3:3556407651691814781",
+          "name": "personajeId",
+          "indexId": "20:2200154443367330872",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Personaje"
+        },
+        {
+          "id": "4:9100435467147197866",
+          "name": "cartaId",
+          "indexId": "21:6949684641911371654",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Carta"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "21:6496139772563282082",
+  "lastIndexId": "21:6949684641911371654",
+  "lastRelationId": "11:5211110023322314704",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    7473393576007453418,
+    6507573966859302558
+  ],
+  "retiredIndexUids": [
+    7303893742210499397,
+    5024073708280898553,
+    6603455287917759680
+  ],
+  "retiredPropertyUids": [
+    3817714092074382538,
+    5743345393844241316,
+    1491526470713749862,
+    1434993218988485343,
+    3354439461701252852,
+    4140384191741472275,
+    7707554749124182322,
+    1641246508437518809,
+    6633106895899100876,
+    5712913817448990604,
+    3423277631564892006,
+    1010898543164589528,
+    2123768952481238971,
+    7906130247029414698,
+    5166812123280077450,
+    4111624346928119086,
+    1171980311585452437,
+    2421881831735238761,
+    1797542095173622222,
+    1122652473657947306,
+    4059704256258111316,
+    4155864178715702018,
+    7848961462059553262,
+    3899247348763561516,
+    2178355196132493918,
+    6911259218711721135,
+    1555018353065707579,
+    1750887147275973891,
+    8036573432484677410,
+    8402888099253259875,
+    2277400697490148027
+  ],
+  "retiredRelationUids": [
+    4693430387755724020,
+    4362505610310635944,
+    7316282004892079214,
+    5211110023322314704
+  ],
+  "version": 1
+}

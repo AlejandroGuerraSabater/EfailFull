@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/efailbg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/botones"
+            android:textAllCaps="false"
+            android:id="@+id/btnContinuar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:enabled="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/botones"
+            android:textAllCaps="false"
+            android:id="@+id/btnNuevaPartida"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Nueva Partida" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/botones"
+            android:textAllCaps="false"
+            android:id="@+id/btnEstadisticas"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Estadísticas" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/botones"
+            android:textAllCaps="false"
+            android:id="@+id/btnSalir"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Salir" />
+    </LinearLayout>
+</LinearLayout>

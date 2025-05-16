@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Sección del Enemigo - Parte superior -->
+
+    <ImageView
+        android:id="@+id/imgEnemigo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.799"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.195" />
+
+    <TextView
+        android:id="@+id/txtNombreEnemigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/contrast"
+        android:text="Murciélago"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/imgEnemigo"
+        app:layout_constraintTop_toTopOf="@+id/imgEnemigo" />
+
+    <TextView
+        android:id="@+id/txtNivelEnemigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:textColor="@color/contrast"
+        android:text="Nivel 1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtNombreEnemigo"
+        app:layout_constraintTop_toTopOf="@+id/txtNombreEnemigo" />
+
+    <TextView
+        android:id="@+id/txtSaludEnemigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Salud XX/XX"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/imgEnemigo"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNivelEnemigo" />
+
+    <TextView
+        android:id="@+id/txtBloqueoEnemigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="0"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSaludEnemigo"
+        app:layout_constraintEnd_toStartOf="@+id/txtSaludEnemigo" />
+
+    <LinearLayout
+        android:id="@+id/panelEfectosEnemigo"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/imgEnemigo"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaludEnemigo"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <ImageView
+        android:id="@+id/intencionEnemigo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgEnemigo"
+        app:layout_constraintTop_toBottomOf="@+id/panelEfectosEnemigo" />
+
+    <!-- Columna de elementos a la derecha -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/botones"
+        android:textAllCaps="false"
+        android:id="@+id/btnInfoEnemigo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Estado"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgEnemigo"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <!-- RecyclerView de mensajes de combate -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMensajes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:padding="4dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinuar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnInfoEnemigo"
+        app:layout_constraintTop_toBottomOf="@+id/btnInfoEnemigo"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <!-- Botón "Continuar" oculto -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/botones"
+        android:textAllCaps="false"
+        android:id="@+id/btnContinuar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        android:textSize="12sp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnUsarCarta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnUsarCarta"
+        app:layout_constraintWidth_percent="0.15" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/botones"
+        android:textAllCaps="false"
+        android:id="@+id/btnUsarCarta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Usar"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinTurno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/botones"
+        android:textAllCaps="false"
+        android:id="@+id/btnFinTurno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Fin turno"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <!-- Sección del Jugador - Parte inferior -->
+
+    <ImageView
+        android:id="@+id/imgJugador"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.195" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/botones"
+        android:textAllCaps="false"
+        android:id="@+id/btnInfoJugador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Estado"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgJugador"
+        app:layout_constraintEnd_toStartOf="@+id/imgJugador"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgJugador"
+        app:layout_constraintTop_toTopOf="@+id/imgJugador"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <TextView
+        android:id="@+id/txtNivelJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/contrast"
+        android:text="Nivel"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtSaludJugador"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNombreJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/contrast"
+        android:text="Nombre"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/txtNivelJugador"
+        app:layout_constraintTop_toTopOf="@+id/txtNivelJugador" />
+
+    <TextView
+        android:id="@+id/txtSaludJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Salud: XX/XX"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/panelEfectosJugador"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtBloqueoJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="0"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/txtSaludJugador"
+        app:layout_constraintTop_toTopOf="@+id/txtSaludJugador" />
+
+    <LinearLayout
+        android:id="@+id/panelEfectosJugador"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/imgJugador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <!-- RecyclerView de Cartas en mano -->
+
+
+    <FrameLayout
+        android:id="@+id/panelEnergia"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnInfoJugador"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnInfoJugador"
+        app:layout_constraintTop_toTopOf="@+id/panelEfectosJugador"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintWidth_percent="0.08">
+
+        <ImageView
+            android:id="@+id/imgEnergiaFondo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/energia"
+            android:rotation="35"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/txtEnergiaJugador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|left"
+            android:text="X/X"
+            android:textColor="@color/contrast"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartasMano"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnFinTurno"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgJugador"
+        app:layout_constraintTop_toBottomOf="@+id/btnInfoJugador"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
