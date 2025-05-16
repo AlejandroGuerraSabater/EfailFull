@@ -55,11 +55,6 @@ public class NuevaPartidaActivity extends AppCompatActivity {
             if (personajeSeleccionado != "") {
                 iniciarPartida();
                 MapaFragment.casilla = 1;
-                PartidaActivity.mazo = new ArrayList<>();
-                PartidaActivity.mano = new ArrayList<>();
-                PartidaActivity.porRobar = new ArrayList<>();
-                PartidaActivity.descartadas = new ArrayList<>();
-                PartidaActivity.desterradas = new ArrayList<>();
                 finish();
             }
         });

@@ -58,6 +58,12 @@ public class PartidaActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
 
+        PartidaActivity.mazo = new ArrayList<>();
+        PartidaActivity.mano = new ArrayList<>();
+        PartidaActivity.porRobar = new ArrayList<>();
+        PartidaActivity.descartadas = new ArrayList<>();
+        PartidaActivity.desterradas = new ArrayList<>();
+
         // Configurar el adaptador del ViewPager2
         pagerAdapter = new PartidaPagerAdapter(this);
         viewPager.setAdapter(pagerAdapter);
@@ -101,10 +107,6 @@ public class PartidaActivity extends AppCompatActivity {
 
         viewPager.setUserInputEnabled(true); // Se puede deslizar, pero Combate no está aún
 
-        //TODO: CARGAR PARTIDA
-        if (false) {
-            viewPager.setCurrentItem(0);
-        }
 
         switch (personaje.getClase().getNombre()) {
             case "Caballero":
