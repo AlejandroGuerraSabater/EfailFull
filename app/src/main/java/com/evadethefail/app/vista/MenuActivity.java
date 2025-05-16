@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
 import android.widget.Button;
@@ -84,19 +85,30 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
+        Window window = getWindow();
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            final WindowInsetsController insetsController = getWindow().getInsetsController();
+            // 1) Desactiva el ajuste automático de insets
+            window.setDecorFitsSystemWindows(false);
+
+            // 2) Consigue el controller
+            final WindowInsetsController insetsController = window.getInsetsController();
             if (insetsController != null) {
-                insetsController.hide(WindowInsets.Type.navigationBars());
+                // 3) Oculta BOTH systemBars (status + navigation)
+                insetsController.hide(WindowInsets.Type.systemBars());
+
+                // 4) Comportamiento: swipe para mostrar temporalmente
                 insetsController.setSystemBarsBehavior(
                         WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
                 );
             }
         } else {
-            View decorView = getWindow().getDecorView();
+            View decorView = window.getDecorView();
             int flags = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                    | View.SYSTEM_UI_FLAG_FULLSCREEN;
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
             decorView.setSystemUiVisibility(flags);
         }
 
