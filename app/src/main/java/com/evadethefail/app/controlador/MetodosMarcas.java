@@ -242,7 +242,7 @@ public class MetodosMarcas {
     private static void osmosis(boolean esJugador) {
         if (esJugador){
 
-            int potencia = ControladorCombate.cartaUsada.getPotencia() / 2;
+            int potencia = ControladorCombate.cartaUsada.getPotencia();
             int dano = ControladorCombate.instanciaControlador.calcularDano(
                     potencia,
                     PartidaActivity.personaje.getNivel(),
@@ -251,10 +251,10 @@ public class MetodosMarcas {
                     0, 0, null, esJugador
             );
 
-            PartidaActivity.personaje.curar(dano/2);
+            PartidaActivity.personaje.curar(dano * 3);
             ControladorCombate.instanciaControlador.danar(false, dano);
             if (dano != 0)
-                ControladorCombate.instanciaControlador.mostrarMensaje("¡Explosión de vida, robaste " + dano/2 + " puntos de vida e hiciste " + dano + " de daño!", true);
+                ControladorCombate.instanciaControlador.mostrarMensaje("¡Explosión de vida, robaste " + dano * 3 + " puntos de vida e hiciste " + dano + " de daño!", true);
 
 
         } else {
@@ -272,7 +272,7 @@ public class MetodosMarcas {
             PartidaActivity.enemigo.curar(dano);
             ControladorCombate.instanciaControlador.danar(true, dano);
             if (dano != 0)
-                ControladorCombate.instanciaControlador.mostrarMensaje("¡Explosión de vida, te robaron " + (dano * 2) + " puntos de vida!", false);
+                ControladorCombate.instanciaControlador.mostrarMensaje("¡Explosión de vida, te robaron " + (dano) + " puntos de vida!", false);
         }
     }
 
