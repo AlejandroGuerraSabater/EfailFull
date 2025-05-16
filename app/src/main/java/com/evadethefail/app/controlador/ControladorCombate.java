@@ -343,29 +343,33 @@ public class ControladorCombate {
 		PartidaActivity.estadisticas.cartasUsadasSumar(1);
 		MenuActivity.estadisticas.cartasUsadasSumar(1);
 
-		if ( cartaUsada.getIdCarta() == 411 ){
-			int roll = (int) (Math.random() * 100) + 1;
 
-			if (roll < 25)
-				cartaUsada = Utilidades.buscaCarta(403);
-			else if (roll < 50)
-				cartaUsada = Utilidades.buscaCarta(405);
-			else if (roll < 75)
-				cartaUsada = Utilidades.buscaCarta(406);
-			else
-				cartaUsada = Utilidades.buscaCarta(407);
-		}
 
 		revisarMarcasPreAccion(true);
 		revisarDerrota();
 
 		if (!inconveniente){
 			inconveniente = false;
+
+			personaje.setEnergiaRestante(personaje.getEnergiaRestante() - cartaUsada.getCosto());
+
+			if ( cartaUsada.getIdCarta() == 411 ){
+				int roll = (int) (Math.random() * 100) + 1;
+
+				if (roll < 25)
+					cartaUsada = Utilidades.buscaCarta(403);
+				else if (roll < 50)
+					cartaUsada = Utilidades.buscaCarta(405);
+				else if (roll < 75)
+					cartaUsada = Utilidades.buscaCarta(406);
+				else
+					cartaUsada = Utilidades.buscaCarta(407);
+			}
+
 			usarCarta(cartaUsada);
 
 			revisarMarcasAccion(true);
 
-			personaje.setEnergiaRestante(personaje.getEnergiaRestante() - cartaUsada.getCosto());
 			controladorEfectosAccion(true);
 			cartas.moverCartaADescartes(combate, combate.cartaActiva);
 		}

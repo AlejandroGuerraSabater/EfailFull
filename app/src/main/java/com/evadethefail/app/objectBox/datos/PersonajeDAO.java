@@ -106,7 +106,7 @@ public class PersonajeDAO {
                 new Carta(407, "Granizo", "Recreación del clima más letal del norte.", 2, 1, 100, "N"),
                 new Carta(408, "Magic Wall", "Barrera mágica casi impenetrable.", 1, 0, 0, "N"),
                 new Carta(409, "Ritual de energia", "Conjuro mágico para ganar más energía al inicio del turno.", 3, 0, 0, "N"),
-                new Carta(410, "Maldicion", "Maldice al enemigo para reducir su suerte.", 1, 0, 0, "N"),
+                new Carta(410, "Maldicion", "Maldice al enemigo para reducir su suerte.", 1, 1, 0, "N"),
                 new Carta(411, "Oración natural", "Lanza una de las 4 cartas elementales básicas al azar.", 0, 1, 0, "N"),
                 new Carta(412, "Ascuas", "Una débil pero versátil bola de fuego.", 1, 1, 50, "N"),
                 new Carta(413, "Rápidos", "Corriente de agua de bajo coste.", 0, 1, 30, "N"),

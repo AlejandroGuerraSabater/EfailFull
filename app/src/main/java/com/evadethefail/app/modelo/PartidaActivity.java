@@ -19,6 +19,7 @@ import com.evadethefail.app.controlador.ControladorPartida;
 import com.evadethefail.app.entidades.Enemigo;
 import com.evadethefail.app.entidades.EstadisticasPartida;
 import com.evadethefail.app.entidades.Personaje;
+import com.evadethefail.app.vista.CartasFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 

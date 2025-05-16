@@ -19,6 +19,9 @@ import com.evadethefail.app.modelo.PartidaActivity;
 
 import com.evadethefail.app.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /** @noinspection ALL*/
 public class NuevaPartidaActivity extends AppCompatActivity {
 
@@ -52,6 +55,11 @@ public class NuevaPartidaActivity extends AppCompatActivity {
             if (personajeSeleccionado != "") {
                 iniciarPartida();
                 MapaFragment.casilla = 1;
+                PartidaActivity.mazo = new ArrayList<>();
+                PartidaActivity.mano = new ArrayList<>();
+                PartidaActivity.porRobar = new ArrayList<>();
+                PartidaActivity.descartadas = new ArrayList<>();
+                PartidaActivity.desterradas = new ArrayList<>();
                 finish();
             }
         });

@@ -251,10 +251,10 @@ public class MetodosMarcas {
                     0, 0, null, esJugador
             );
 
-            PartidaActivity.personaje.curar(dano * 3);
+            PartidaActivity.personaje.curar(dano * 2);
             ControladorCombate.instanciaControlador.danar(false, dano);
             if (dano != 0)
-                ControladorCombate.instanciaControlador.mostrarMensaje("¡Explosión de vida, robaste " + dano * 3 + " puntos de vida e hiciste " + dano + " de daño!", true);
+                ControladorCombate.instanciaControlador.mostrarMensaje("¡Explosión de vida, robaste " + dano * 2 + " puntos de vida e hiciste " + dano + " de daño!", true);
 
 
         } else {
